@@ -1,0 +1,33 @@
+body{
+  background: #00000;
+}
+.img{
+  height: 120px;
+  width: 120px;
+  padding-right: 100px;
+  margin-top: 5px;
+  z-index: 1
+}
+
+.img1{
+  height: 150px;
+  width: 150px;
+  margin-left: 640px;
+  padding-right: 30px;
+  margin-top: 60px;
+  z-index: 1
+}
+
+.arrow
+{
+  height: 370px;
+  width: 100px;
+  margin-left: 660px;
+}
+
+.img2
+{
+  height: 90px;
+  width: 90px;
+  padding-right: 30px;
+}
