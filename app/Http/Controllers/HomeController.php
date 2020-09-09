@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Database\Eloquent\Model;
 class HomeController extends Controller
 {
     /**
@@ -25,4 +26,21 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function easy()
+    {
+        return view('easy');
+    }
+
+    public function medium()
+    {
+        return view('medium');
+    }
+
+    public function hard()
+    {
+        return view('hard');
+    }
+
+
 }

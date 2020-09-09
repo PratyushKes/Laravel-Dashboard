@@ -12,11 +12,46 @@ class GameController extends Controller
 
   public function index()
   {
+    return view('index');
+  }
+
+  public function easy()
+  {
       // Equivalent to "select * from question WHERE id = 1"
       $questions = Question::all(); // Returns all question
+      $counts = count($questions);
+      $id = rand(1,$counts);
+      $question = $questions[$id]; // To select second question
+      return view('easy', compact('question'));
+  }
 
-      $question = $questions[0]; // To select second question
 
-      return view('index', compact('question'));
+  public function medium()
+  {
+    // Equivalent to "select * from question WHERE id = 1"
+    $questions = Question::all(); // Returns all question
+    $counts = count($questions);
+    $id = rand(1,$count);
+    $question = $questions[$id]; // To select second question
+    return view('medium', compact('question'));
+  }
+
+  public function hard()
+  {
+    // Equivalent to "select * from question WHERE id = 1"
+    $questions = Question::all(); // Returns all question
+    $counts = count($questions);
+    $id = rand(0,$count);
+    $question = $questions[$id]; // To select second question
+    return view('hard', compact('question'));
   }
 }
+
+
+?>
+
+<html>
+<body>
+
+</body>
+</html>

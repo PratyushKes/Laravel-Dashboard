@@ -4,158 +4,87 @@
     $color = '#'.$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)];
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <title>Game</title>
-    <style>
-    .box{
-        position: relative;
-        display: inline-block /* Make the width of box same as image */
-    }
-    .box .option_a{
-        position: absolute;
-        z-index: 999;
-        margin: 0 ;
-        left: 0;
-        right: 0;
-        text-align: center;
-        top: 10%; /* Adjust this value to move the positioned div up and down */
+    <title>Hooping Game</title>
+    <script src="index.js"></script>
+    <style media="screen">
+    .myButton {
+background-color:#44c767;
+border-radius:28px;
+border:1px solid #18ab29;
+display:inline-block;
+cursor:pointer;
+color:#ffffff;
+margin-top: 300px;
+font-family:Arial;
+font-size:17px;
+padding:16px 31px;
+text-decoration:none;
+text-shadow:0px 1px 0px #2f6627;
+}
+.myButton:hover {
+background-color:#5cbf2a;
+}
+.myButton:active {
+position:relative;
+top:1px;
+}
 
-        font-family: Arial,sans-serif;
-        color: #fff;
-        width: 60%; /* Set the width of the positioned div */
-    }
-    .box1{
-        position: relative;
-        display: inline-block /* Make the width of box same as image */
-    }
-    .box1 .option_b{
-        position: absolute;
-        z-index: 999;
-        margin: 0 ;
-        left: 0;
-        right: 0;
-        text-align: center;
-        top: 10%; /* Adjust this value to move the positioned div up and down */
+.myButtonn {
+background-color:#44c767;
+border-radius:28px;
+border:1px solid #18ab29;
+display:inline-block;
+cursor:pointer;
+color:#ffffff;
+font-family:Arial;
+font-size:17px;
+margin-top: 300px;
+padding:16px 31px;
+text-decoration:none;
+text-shadow:0px 1px 0px #2f6627;
+}
+.myButtonn:hover {
+background-color:#5cbf2a;
+}
+.myButtonn:active {
+position:relative;
+top:1px;
+}
 
-        font-family: Arial,sans-serif;
-        color: #fff;
-        width: 60%; /* Set the width of the positioned div */
-    }
-    .box2{
-        position: relative;
-        display: inline-block /* Make the width of box same as image */
-    }
-    .box2 .option_c{
-        position: absolute;
-        z-index: 999;
-        margin: 0 ;
-        left: 0;
-        right: 0;
-        text-align: center;
-        top: 10%; /* Adjust this value to move the positioned div up and down */
-
-        font-family: Arial,sans-serif;
-        color: #fff;
-        width: 60%; /* Set the width of the positioned div */
-    }
-    .box3{
-        position: relative;
-        display: inline-block /* Make the width of box same as image */
-    }
-    .box3 .option_d{
-        position: absolute;
-        z-index: 999;
-        margin: 0 ;
-        left: 0;
-        right: 0;
-        text-align: center;
-        top: 10%; /* Adjust this value to move the positioned div up and down */
-
-        font-family: Arial,sans-serif;
-        color: #fff;
-        width: 60%; /* Set the width of the positioned div */
-    }
-
-    .box4{
-        position: relative;
-        display: inline-block /* Make the width of box same as image */
-    }
-    .box4 .display{
-        position: absolute;
-        z-index: 999;
-        margin: 0 auto;
-        padding-left: 300;
-        left: 0;
-        right: 250;
-        text-align: center;
-        top: 10%; /* Adjust this value to move the positioned div up and down */
-
-        font-family: Arial,sans-serif;
-        color: #fff;
-        width: 60%; /* Set the width of the positioned div */
-    }
-</style>
-  </head>
+.myButtonnn {
+background-color:#44c767;
+border-radius:28px;
+border:1px solid #18ab29;
+display:inline-block;
+cursor:pointer;
+color:#ffffff;
+font-family:Arial;
+margin-top: 300px;
+font-size:17px;
+padding:16px 31px;
+text-decoration:none;
+text-shadow:0px 1px 0px #2f6627;
+}
+.myButtonnn:hover {
+background-color:#5cbf2a;
+}
+.myButtonnn:active {
+position:relative;
+top:1px;
+}
+    </style>
   <body>
     <center>
-
-
-    <div class="images">
-      <div class="box">
-      <img class="img" src="{{ asset('img/b.png') }}" alt="">
-      <div class="option_a">
-        <h5 style="color: <?php echo $color; ?>;">{{ $question->option_a }}</h5>
-      </div>
-
-      </div>
-      <div class="box1">
-        <img class="img" src="{{ asset('img/b.png') }}" alt="">
-        <div class="option_b">
-          <h5 style="color: <?php echo $color; ?>;">{{ $question->option_b }}</h5>
-        </div>
-
-      </div>
-      <div class="box2">
-        <img class="img" src="{{ asset('img/b.png') }}" alt="">
-        <div class="option_c">
-          <h5 style="color: <?php echo $color; ?>;">{{ $question->option_c }}</h5>
-        </div>
-
-      </div>
-      <div class="box3">
-        <img class="img" src="{{ asset('img/b.png') }}" alt="">
-        <div class="option_d">
-          <h5 style="color: <?php echo $color; ?>;">{{ $question->option_d }}</h5>
-        </div>
-
-      </div>
-    </div>
-    </center>
-
-    <div class="arr">
-      <img class="arrow" src="{{ asset('img/arrow.png') }}" alt="">
-
-    </div>
-
-    <div class="images1">
-      <div class="box4">
-        <img class="img1" src="{{ asset('img/b.jpg') }}" alt="">
-              <div class="display">
-                <h3 style="color: <?php echo $color; ?>;"> {{ $question->question }}</h3>
-              </div>
-      </div>
-      <img class="img2" src="{{ asset('img/imab.jfif') }}" alt="">
-      <img class="img2" src="{{ asset('img/imab.jfif') }}" alt="">
-      <img class="img2" src="{{ asset('img/imab.jfif') }}" alt="">
-      <img class="img2" src="{{ asset('img/imab.jfif') }}" alt="">
-    </div>
-
-
-
+    <h1>Make your Choice</h1>
+    <center>
+    <center>
+    <a href="easy" class="myButton">Easy</a>
+    <a href="medium" class="myButtonn">Medium</a>
+    <a href="hard" class="myButtonnn">Hard</a>
+  </center>
   </body>
 </html>
